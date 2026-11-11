@@ -1,1 +1,109 @@
-/* Add your own styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f3ff;
+    color: #2d2a3e;
+}
+
+header {
+    background: #4c1d95;
+    padding: 24px 16px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 16px;
+}
+
+#controls {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+#controls label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#country {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 1px solid #c4b5fd;
+    border-radius: 4px;
+    margin-bottom: 14px;
+}
+
+#country:focus {
+    outline: none;
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.3);
+}
+
+button {
+    padding: 10px 18px;
+    margin: 0 4px;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#lookup {
+    background: #7c3aed;
+}
+
+#lookup:hover {
+    background: #6d28d9;
+}
+
+#lookup-cities {
+    background: #d97706;
+}
+
+#lookup-cities:hover {
+    background: #b45309;
+}
+
+#result table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#result th,
+#result td {
+    padding: 10px 12px;
+    border: 1px solid #ddd6fe;
+    text-align: left;
+}
+
+#result th {
+    background: #ede9fe;
+    text-align: center;
+}
+
+#result tbody tr:nth-child(even) {
+    background: #faf5ff;
+}
+
+#result tbody tr:hover {
+    background: #f3e8ff;
+}

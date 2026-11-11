@@ -1,12 +1,13 @@
 window.addEventListener('load', function () {
     var lookupBtn = document.getElementById('lookup');
+    var citiesBtn = document.getElementById('lookup-cities');
     var countryInput = document.getElementById('country');
     var result = document.getElementById('result');
 
-    lookupBtn.addEventListener('click', function () {
-        var country = countryInput.value;
+    function search(extra) {
+        var url = 'world.php?country=' + encodeURIComponent(countryInput.value) + extra;
 
-        fetch('world.php?country=' + encodeURIComponent(country))
+        fetch(url)
             .then(function (response) {
                 if (response.ok) {
                     return response.text();
@@ -19,5 +20,13 @@ window.addEventListener('load', function () {
             .catch(function (error) {
                 result.innerHTML = 'There was a problem: ' + error.message;
             });
+    }
+
+    lookupBtn.addEventListener('click', function () {
+        search('');
+    });
+
+    citiesBtn.addEventListener('click', function () {
+        search('&lookup=cities');
     });
 });
